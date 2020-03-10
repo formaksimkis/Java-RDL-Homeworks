@@ -12,7 +12,7 @@ public class ConsumerTask implements Runnable {
     @Override
     public void run() {
         while (!buffer.isBufferEmpty()) {
-            int ms = 10 * id;
+            int ms = 200 + 10 * id;
             System.out.println("Consumer " + id + " received : " + buffer.get());
             try {
                 Thread.sleep(ms);
