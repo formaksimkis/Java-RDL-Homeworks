@@ -26,12 +26,15 @@ public class Main {
     }
 
     public static class LifeCycleAction {
-        public void execute() throws LifeCycleActionExecutionException, AccessDeniedException {
+        public void execute() throws LifeCycleActionExecutionException, AccessDeniedException, MyActionException {
             throw new LifeCycleActionExecutionException();
         }
     }
 
     public static class LifeCycleActionExecutionException extends Exception {
+    }
+
+    public static class MyActionException extends Exception {
     }
 
 
